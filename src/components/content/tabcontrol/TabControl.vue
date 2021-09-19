@@ -21,7 +21,8 @@
     methods: {
       itemClick(index) {
         this.currentIndex = index
-      }
+        this.$emit('tabClick', index)
+      },
     },
     data() {
       return {
@@ -37,9 +38,10 @@
     text-align: center;
     font-size: 14px;
     position: sticky;
-    top: 44px;
+    top: 43px;
     line-height: 40px;
     background: #fff;
+    z-index: 1;
   }
 
   .tab-control-item {
